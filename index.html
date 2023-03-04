@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Images/Code.png">
+    <title>ArCaSoft</title>
+</head>
+<body>
+   <!--Secccion Inicio-->
+   <a href="https://api.whatsapp.com/send?phone=5511254660" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+   <section id="Inicio">
+    <div class="contenido">
+        <header>
+            <div class="contenido-header">
+                <h1>ArCaSoft</h1>
+                <nav id="nav" class="">
+                    <ul id="links">
+                        <li><a href="#Inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a></li>
+                        <li><a href="#sobrenosotros"  onclick="seleccionar(this)">Sobre Nosotros</a></li>
+                        <li><a href="#servicios"   onclick="seleccionar(this)">Servicios</a></li>
+                        <li><a href="#skills"  onclick="seleccionar(this)">Habilidades</a></li>
+                        <li><a href="#portafolio" onclick="seleccionar(this)">Portafolio</a></li>
+                        <li><a href="#contacto" onclick="seleccionar(this)">Contactanos</a></li>
+                    </ul>
+                </nav>
+
+                <!--Iconos para menu responsive-->
+                <div id="icon-nav" onclick="responsiveMenu()">
+                    <i class="fa-solid fa-bars-progress"></i>
+                </div>
+                <!--Iconos para redes sociales-->
+                <div class="Redes">
+                    <a href="https://www.facebook.com/arzate.ramirez.35"><i class="fa-brands fa-square-facebook"></i></a>
+                  
+                </div>
+            </div>
+        </header>
+        <div class="presentacion">
+            <p class="bienvenida">Bienvenidos</p>
+            <h2>Somos <span>ArCaSoft</span> Desarrolladores web y de aplicaciones móviles</h2>
+            <p class="descripcion">Hola! Somos Arzate y Casimiro, Nos gusta y nos apaciona mucho la programacion</p>
+            <a class="#portafolio" href="#portafolio">Ir a portafolio</a>
+        </div>
+    </div>
+   </section>
+
+   <!--Seccion Sobre Nostros-->
+   <section id="sobrenosotros">
+    <div class="contenedor-foto">
+        <img src="images/Nosotros.jpg" alt="">
+    </div>
+    <div class="sobrenosotros">
+        <p class="titulo-seccion">Sobre nosostros</p>
+        <h2> Hola, Somos <span>ArCaSoft</span></h2>
+        <p>Somos 2 jovenes que se conocieron en 1er semetre de preparatoria, Comenzamos en el mundo de la programacion en 4rto semestre, Nos apaciona mucho programar <br>Nos incribimos a la misma universidad con el sueño de terminar nuestras carreras juntos </p>
+        <p>Nuestra mision es elevar la experiencia del usuario mediante el uso de internet y la tecnologia para ayudar a la sociedad</p>
+    </div>
+    
+   </section>
+   <!--Seccion de servicios-->
+   <section id="servicios">
+
+    <h3 class="titulo-seccion">Nuestros Servicios</h3>
+    <div class="fila">
+        <div class="servicios">
+            <span class="icono"> <i class="fa-solid fa-code"></i></span>
+            <h4>Flutter</h4>
+            <p>Tenemos conocimiento de Dart que es un framework de desarrollo de aplicaciones moviles, Tenemos 1 año de experiencia en este lenguaje</p>
+        </div>
+        <div class="servicios">
+            <span class="icono"> <i class="fa-solid fa-code"></i> </i></span>
+            <h4>Diseños de Sitios Web</h4>
+            <p>Tenemos un importante conocimiento en lenguajes de programacion como HTML, CSS y JavaScript<p>
+        </div>
+    </div>
+   </section>
+   <!--Seccion de Habilidades-->
+   <div class="contenedor-skills" id="skills">
+    <h3>Habilidades</h3>
+    <div class="skill">
+        <div class="info">
+            <p><span class="lista">HTML & CSS</span></p>
+            <span class="porcentaje">85%</span>
+        </div>
+        <div class="barra">
+            <div id="html" class="barra-progreso1"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="info">
+            <p><span class="lista">JavaScript</span></p>
+            <span class="porcentaje">40%</span>
+        </div>
+        <div class="barra">
+            <div id="js" class="barra-pregreso2"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <div class="info">
+            <p><span class="lista">Flutter</span></p>
+            <span class="porcentaje">95%</span>
+        </div>
+        <div class="barra">
+            <div id="fl" class="barra-pregreso3"></div>
+        </div>
+    </div>
+   </div>
+   <!--Seccion Portafolio-->
+   <section id="portafolio">
+    <h3 class="titulo-seccion">Nuestros Proyectos</h3>
+    <div class="fila">
+        <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="Images/Trabajo1.png" alt="">
+            <div class="info">
+                <h4>Descripcion del Proyecto</h4>
+                <p>Diseño Web</p>
+            </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="Images/Trabajo1.png" alt="">
+            <div class="info">
+                <h4>Descripcion del Proyecto</h4>
+                <p>Diseño Web</p>
+            </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+            <img src="Images/Trabajo1.png" alt="">
+            <div class="info">
+                <h4>Descripcion del Proyecto</h4>
+                <p>Diseño Web</p>
+            </div>
+        </div>
+    </div>
+   </section>
+  
+   <!--Footer-->
+   <footer>
+    <p>Todos los derechos reservados 2023-2024 <br> Con 💓 Arzate </p>
+    <div class="Redes">
+        <a href="https://www.facebook.com/arzate.ramirez.35"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+   </footer>
+  <script src="index.js" ></script>
+</body>
+</html>
