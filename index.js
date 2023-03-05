@@ -17,16 +17,3 @@ function responsiveMenu() {
         x.className = "";
     }
 }
-
-function cambiarModo() {
-    var cuerpo = document.body;
-    var boton = document.querySelector(".modo");
-  
-    if (cuerpo.classList.contains("oscuro")) {
-      cuerpo.classList.remove("oscuro");
-      boton.innerHTML = "Modo Claro";
-    } else {
-      cuerpo.classList.add("oscuro");
-      boton.innerHTML = "Modo Oscuro";
-    }
-  }

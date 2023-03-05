@@ -1,39 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'Anonymous Pro', monospace;
 }
 
 html {
     scroll-behavior: smooth;
 }
-@keyframes spin_4991{
-    10%{
-        transform:  translateY(-105%);
-    }
-    25%{
-        transform:  translateY(-100%);
-    }
-    35%{
-        transform:  translateY(-205%);
-    }
-    50%{
-        transform:  translateY(-200%);
-    }
-    60%{
-        transform:  translateY(-305%);
-    }
-    75%{
-        transform:  translateY(-300%);
-    }
-    85%{
-        transform:  translateY(-405%);
-    }
-    100%{
-        transform:  translateY(-400%);
-    }
+
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+ 
+}
+
+    
+.dark-theme{
+    --primary-colorbg1: #ffffff;
+    --secondary-colorbg2: #000000;
+    ---Whatsapp-colorbg1: #25d366;
+    ---Whatsapp-colorbg2: #000000;
+    ---BackGround-image1: url(Images/background1.png);
+    ---BackGround-image2: url(Images/background.png);
 }
 
 /* *********************/
@@ -41,7 +33,7 @@ html {
 /* *********************/
 
 #Inicio {
-    background-color: black;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), var(---BackGround-image2);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -50,6 +42,7 @@ html {
 #Inicio .contenido header {
     background-color: rgba(0, 0, 0, .8);
     position: fixed;
+    background-color: var(--secondary-colorbg2);
     width: 100%;
     z-index: 100;
     top: 0;
@@ -66,7 +59,7 @@ html {
 
 #Inicio .contenido header .contenido-header h1 {
     text-align: center;
-    color: white;
+    color: var(--primary-colorbg1);
 }
 
 #Inicio .contenido header .contenido-header nav ul {
@@ -77,19 +70,19 @@ html {
 
 #Inicio .contenido header .contenido-header nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-colorbg1);
     margin: 0 12px;
     font-weight: 400;
     transition: .5s;
 }
 
 #Inicio .contenido header .contenido-header nav ul li a:hover {
-    color: white;
+    color: grey
 }
 
 #Inicio .contenido header .contenido-header .Redes a {
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-colorbg1);
     display: inline-block;
     margin-left: 10px;
     transition: .5s;
@@ -100,21 +93,21 @@ html {
 }
 
 #Inicio .contenido header .contenido-header .seleccionado {
-    color: white;
+    color: var(--primary-colorbg1);
 }
 
 #Inicio .contenido .presentacion {
     max-width: 1100px;
     height: 100vh;
     margin: auto;
-    color: #fff;
+    color: var(--primary-colorbg1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
  #Inicio .contenido .presentacion .loader{
-    color: white;
+    color: var(--primary-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
     font-size: 25px;
@@ -123,23 +116,9 @@ html {
     display: flex;
     border-radius: 8px;
 }
-.words{
-    overflow:  hidden;
-    text-align: center;
-}
-.word{
-    text-align: center;
-    display: block;
-    height: 100%;
-    padding-left: 6px;
-    color: grey;
-    animation: spin_4991 8s infinite;
-}
-.word:hover{
-    color: white;
-}
 
 #Inicio .contenido .presentacion .bienvenida {
+    color: var(--primary-colorbg1);
     font-size: 16px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -147,12 +126,14 @@ html {
 }
 
 #Inicio .contenido .presentacion h2 {
+    color: var(--primary-colorbg1);
     font-size: 55px;
     margin-bottom: 25px;
     text-align: center;
 }
 
 #Inicio .contenido .presentacion h2 span {
+    color: var(--primary-colorbg1);
     font-size: 25px;
     color: grey;
 }
@@ -174,9 +155,9 @@ html {
     display: inline-block;
     margin: 25px;
     padding: 20px 25px;
-    border: 2px solid #fff;
+    border: 2px solid var(--primary-colorbg1);
     border-radius: 50px;
-    color: #fff;
+    color: var(--primary-colorbg1);
     font-weight: bold;
     text-transform: uppercase;
     transition: .5s;
@@ -186,20 +167,33 @@ html {
     background-color: grey;
 }
 
-#icon-nav {
-    color: white;
+#icon-nav{
+    color: var(--primary-colorbg1);
     display: none;
 }
 
+#icon-lightdiv img{
+    position: absolute;
+    width: 30px;
+    cursor: pointer;
+    top: 10px;
+    left: 150px;
+}
+#icon-lightdiv{
+  display: contents;
+}
+
+
+
 .btn-wsp{
+    color: var(--primary-colorbg1);
     position:fixed;
     width:60px;
     height:60px;
     line-height: 63px;
     bottom:25px;
     right:25px;
-    background:#25d366;
-    color:#FFF;
+    background: var(---Whatsapp-colorbg1);
     border-radius:50px;
     text-align:center;
     font-size:35px;
@@ -208,7 +202,7 @@ html {
     transition: all 300ms ease;
 }
 .btn-wsp:hover{
-    background: #20ba5a;
+    background: grey;
 }
 /* *********************/
 /* seccion S O B R E  M I */
@@ -217,8 +211,8 @@ html {
 #sobrenosotros {
     margin: auto;
     padding: 100px 15px;
-    color: white;
-    background-color: black;
+    color: var(--primary-colorbg1);
+    background-color: var(--secondary-colorbg2);
     display: flex;
 }
 #sobrenosotros a{
@@ -239,7 +233,7 @@ html {
     padding: 20px;
     width: 100%;
     border-radius: 20px;
-    background-color: white;
+    background-color: var(--primary-colorbg1);
 }
 
 #sobrenosotros .sobrenosotros {
@@ -247,6 +241,7 @@ html {
 }
 
 #sobrenosotros .sobrenosotros .titulo-seccion {
+    color: var(--secondary-colorbg1);
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
@@ -254,6 +249,7 @@ html {
 }
 
 #sobrenosotros .sobrenosotros h2 {
+    color: var(--primary-colorbg1);
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
@@ -269,6 +265,8 @@ html {
 }
 
 #sobrenosotros .sobrenosotros h3 {
+    color: var(--primary-colorbg1);
+
     font-size: 20x;
     font-weight: 500;
     text-transform: uppercase;
@@ -279,14 +277,14 @@ html {
 #sobrenosotros .sobrenosotros p {
     font-size: 20px;
     line-height: 25px;
-    color: white;
+    color: var(--primary-colorbg1);
     margin-bottom: 12px;
 }
 
 #sobrenosotros .sobrenosotros a {
     display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: var(--primary-colorbg2);
     border-radius: 30px;
     border: 1px solid #000;
     padding: 10px 20px;
@@ -296,7 +294,7 @@ html {
 
 #sobrenosotros .sobrenosotros a:hover {
     background-color: #ff5080;
-    color: #fff;
+    color: var(--primary-colorbg1);
 }
 /* *********************/
 /* seccion S E R V I C I O S */
@@ -305,14 +303,14 @@ html {
 #servicios {
     padding: 100px 15px;
     text-align: center;
-    background-color: black;
+    background-color: var(--secondary-colorbg2);
 }
 
 #servicios .titulo-seccion {
     text-align: center;
     font-size: 22px;
     text-transform: uppercase;
-    color: white;
+    color: var(--primary-colorbg1);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -325,10 +323,11 @@ html {
 
 #servicios .fila .servicios {
     max-width: 350px;
-    background-color: #fff;
+    background-color: white;
     padding: 30px;
     margin: 0 5px;
-    border-radius: 5px;
+    color: var(--primary-colorbg1);
+    border-radius: 5px solid 2px black;
     transition: .5s;
 }
 
@@ -340,13 +339,15 @@ html {
     display: inline-block;
     width: 60px;
     height: 60px;
+    color: wite;
     border-radius: 50%;
-    background-color: #d3d3d3;
+    background-color: grey;
     padding: 20px;
     margin-bottom: 25px;
 }
 
 #servicios .fila .servicios h4 {
+    color: black;
     font-size: 22px;
     margin-bottom: 25px;
 }
@@ -354,7 +355,7 @@ html {
 #servicios .fila .servicios hr {
     width: 30%;
     margin: auto;
-    color: #000;
+    color: var(--primary-colorbg1);
     margin-bottom: 25px;
 }
 
@@ -366,6 +367,7 @@ html {
 }
 
 #servicios .fila .servicios p {
+    color: var(--secondary-colorbg2);
     font-size: 14px;
     line-height: 22px;
 }
@@ -374,12 +376,9 @@ html {
 /* *********************/
 
 .contenedor-skills {
-    background: linear-gradient( black, rgba(33, 16, 16, 0.8)), url("Images/background.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    color: var(--primary-colorbg1);
+    background-color: var(--secondary-colorbg2);
     background-size: cover;
-    color: #fff;
-    background-position: center center;
     padding: 100px 0;
     text-align: center;
 }
@@ -402,28 +401,28 @@ html {
 }
 
 .contenedor-skills .skill .barra {
-    background-color: #919191;
+    background-color:blue;
     width: 100%;
     height: 6px;
     margin: 10px 0px;
 }
 
 .contenedor-skills .skill .barra .barra-progreso1{
-    background-color: #fff;
+    background-color: orange;
     width: 95%;
     height: 6px;
     animation: progreso1 2s forwards;
 }
 
 .contenedor-skills .skill .barra .barra-pregreso2 {
-    background-color: #fff;
+    background-color: orange;
     width: 90%;
     height: 6px;
     animation: progreso2 2s forwards;
 }
 
 .contenedor-skills .skill .barra .barra-pregreso3 {
-    background-color: #fff;
+    background-color: orange;
     width: 90%;
     height: 6px;
     animation: progreso3 2s forwards;
@@ -460,18 +459,19 @@ html {
 /* *********************/
 
 #portafolio {
-    background-color: black;
+    background-color: var(--secondary-colorbg2);
     padding: 100px 0;
     margin: auto;
+    color: var(--secondary-colorbg1);
 }
 
 #portafolio .titulo-seccion {
     text-align: center;
     font-size: 22px;
     text-transform: uppercase;
-    color: white;
+    color: var(--secondary-colorbg2);
     text-decoration: underline;
-    text-decoration-color: white;
+    text-decoration-color: var(--secondary-colorbg2);
     text-decoration-thickness: 5px;
 }
 
@@ -505,7 +505,7 @@ html {
 #portafolio .fila .proyecto .info {
     position: absolute;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, .8);
     color: white;
     width: 100%;
     padding: 10px;
@@ -517,89 +517,23 @@ html {
 #portafolio .fila .proyecto:hover .info {
     opacity: 1;
     bottom: 0;
-}
-/* *********************/
-/* seccion C O N T A C T O */
-/* *********************/
-
-#contacto {
-    padding: 100px 15px;
-    background-color: black;
-}
-
-#contacto .titulo-seccion {
     color: white;
-    margin-bottom: 20px;
 }
 
-#contacto .contenedor-form {
-    max-width: 1100px;
-    margin: auto;
-}
-
-#contacto .contenedor-form .fila {
-    margin-bottom: 15px;
-}
-
-#contacto .contenedor-form .filamitad {
-    display: flex;
-    justify-content: space-between;
-}
-
-#contacto .contenedor-form input,
-#contacto .contenedor-form textarea {
-    padding: 20px;
-    border-radius: 20px;
-    border: none;
-    border: 1px solid #919191;
-}
-
-#contacto .contenedor-form .filamitad input {
-    width: 48%;
-}
-
-#contacto .contenedor-form .input-full {
-    width: 100%;
-}
-
-#contacto .titulo-seccion {
-    text-align: center;
-    font-size: 22px;
-    text-transform: uppercase;
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: black;
-    text-decoration-thickness: 5px;
-}
-
-#contacto .btn-enviar {
-    margin-bottom: 40px;
-    display: block;
-    margin: auto;
-    cursor: pointer;
-    transition: .5s;
-    background-color:white ;
-    padding: 10px 15px !important;
-}
-
-#contacto .btn-enviar:hover {
-    background-color: grey;
-    color: black;
-}
 /* *********************/
 /* seccion F O O T E R */
 /* *********************/
 
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--secondary-colorbg2);
+    color: var(--primary-colorbg1);
     text-align: center;
     padding: 30px 0;
 }
 
 footer a {
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-colorbg1);
     display: inline-block;
     margin: 5px;
     font-size: 26px;
@@ -608,7 +542,7 @@ footer a {
 /* seccion R E S P O N S I V E */
 /* *********************/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .modo {
         position: absolute;
         top: 600px;
@@ -623,7 +557,7 @@ footer a {
     }
     nav.responsive {
         display: block;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: var(--secondary-colorbg2);
         width: 100%;
         position: absolute;
         top: 48px;
@@ -639,6 +573,17 @@ footer a {
     }
     #icon-nav {
         display: block;
+    }
+    #icon-dark{
+      display: block;
+    }
+    #icon-light{
+        display: block;
+        width: 30px;
+        top: 4px;
+        left: 70px;
+        position: absolute;
+       
     }
     #Inicio .contenido .presentacion h2 {
         font-size: 30px;

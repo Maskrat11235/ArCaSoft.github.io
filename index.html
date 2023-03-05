@@ -36,6 +36,11 @@
                 <div id="icon-nav" onclick="responsiveMenu()">
                     <i class="fa-solid fa-bars-progress"></i>
                 </div>
+
+                <div id="icon-lightdiv">
+                    <img src="Images/moon.png" id="icon-light" >
+                </div>
+                
                 <!--Iconos para redes sociales-->
                 <div class="Redes">
                     <a href="https://www.facebook.com/arzate.ramirez.35"><i class="fa-brands fa-square-facebook"></i></a>
@@ -45,8 +50,8 @@
         </header>
         <div class="presentacion">
             <p class="bienvenida">Bienvenidos</p>
-            <h2>Somos <span>ArCaSoft</span> Desarrolladores web y de aplicaciones móviles</h2>
-            <p class="descripcion">Hola! Somos Arzate y Casimiro, Nos gusta y nos apaciona mucho la programacion</p>
+            <h2>Somos <span class="auto-script">ArCaSoft</span></h2>
+            
             <a class="#portafolio" href="#portafolio">Ir a portafolio</a>
         </div>
     </div>
@@ -153,5 +158,33 @@
     </div>
    </footer>
   <script src="index.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-script", {
+      strings:[ "ArCaSoft", "ArCaSoft" ," Desarrolladores de Apps Moviles", "Desarrolladores Webs", "Diseñadores Graficos"
+      ],
+      startDelay: 10,
+      typeSpeed: 70,
+      backspeed: 100,
+      loop: true,
+      smartBackspace: true,
+      loopCount: Infinity,
+      showCursor: true
+    })
+  </script>
+
+  <script>
+    var icon = document.getElementById("icon-light");
+
+    icon.onclick = function (){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains ("dark-theme")){
+            icon.src="Images/sun.png";
+        }else{
+            icon.src = "Images/moon.png";
+        }
+    }
+
+  </script>
 </body>
 </html>
